@@ -9,19 +9,24 @@ Se dobbiamo confrontare qualcosa che "cosa" ci serve? */
 
 const mailAddressList = ["mail1", "mail2", "mail3", "mail4"];
 
+//console.log(typeof mailAddressList);
+
 const userMailAddress = prompt("Enter your Email:");
 
-//let addressList = false;
-//let addressList = true;
+let addressListFound = false;
 
-//for cicle?
+for (let index = 0; index <= mailAddressList.length; index++) {
+  alert(mailAddressList[index]);
+  const email = mailAddressList[index];
 
-if (userMailAddress == mailAddressList) {
-  console.log("You can Enter");
-} else if (userMailAddress == mailAddressList) {
-  console.log("your mail is not in the list");
-} else {
-  console.log("404");
+  if (userMailAddress == email) {
+    console.log("You can Enter");
+    addressListFound = true;
+  } else if (!userMailAddress == email) {
+    console.log("your mail is not in the list");
+  } else {
+    console.log("404");
+  }
 }
 
 /* for (let index = 0; index < mailAddressList.length; index++){
